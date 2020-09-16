@@ -39,30 +39,22 @@ public class Main {
     // Constant for large pizza
     final double LARGE_PIZZA = 40.01;
 
+    // finnd the cost of the pizza
+    double subtotal = pizzaSize * TOPPINGS_COST + OVEN_COST + PIZZA_COST;
+    double taxes = subtotal * 0.13;
+    double total = subtotal + taxes;
+
+    // tell the customer the costs
+    System.out.println("Subtotal: " + "$" + subtotal);
+    System.out.println("Taxes: " + "$" + taxes);
+    System.out.println("Total: " + "$" + total);
+
     // find out what size of pizza they have and cost
     if (pizzaSize <= SMALL_PIZZA){
-      double subtotal = pizzaSize * TOPPINGS_COST + OVEN_COST + PIZZA_COST;
-      double taxes = subtotal * 0.13;
-      double total = subtotal + taxes;
-      System.out.println("Subtotal: " + "$" + subtotal);
-      System.out.println("Taxes: " + "$" + taxes);
-      System.out.println("Total: " + "$" + total);
       System.out.println("We are going to make you a cute little pizza!");
     } else if (pizzaSize >= MEDIUM_LOW && pizzaSize <= MEDIUM_HIGH) {
-      double subtotal = pizzaSize * TOPPINGS_COST + OVEN_COST + PIZZA_COST;
-      double taxes = subtotal * 0.13;
-      double total = subtotal + taxes;
-      System.out.println("Subtotal: " + "$" + subtotal);
-      System.out.println("Taxes: " + "$" + taxes);
-      System.out.println("Total: " + "$" + total);
       System.out.println("This will be delicious!");
     } else {
-      double subtotal = pizzaSize * TOPPINGS_COST + OVEN_COST + PIZZA_COST;
-      double taxes = subtotal * 0.13;
-      double total = subtotal + taxes;
-      System.out.println("Subtotal: " + "$" + subtotal);
-      System.out.println("Taxes: " + "$" + taxes);
-      System.out.println("Total: " + "$" + total);
       System.out.println("Whoa, big pizza! You might need a truck to bring this home");
     }
 
